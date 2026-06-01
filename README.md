@@ -1,18 +1,46 @@
-## Getting Started
+# FinTrack Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Funcionalidades
 
-## Folder Structure
+- Cadastro de receitas (entradas)
+- Cadastro de despesas (saídas)
+- Listagem de transações
+- Cálculo de saldo
+- Remoção de transações por ID
 
-The workspace contains two folders by default, where:
+## Conceitos utilizados
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- Classes e Objetos
+- Encapsulamento
+- Construtores
+- ArrayList
+- Métodos
+- Getters e Setters
+- Manipulação de datas com LocalDate
+- Estruturas de repetição
+- Estruturas condicionais
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Estrutura do Projeto
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+### Transacao
 
-## Dependency Management
+Representa uma movimentação financeira contendo:
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- ID
+- Descrição
+- Valor
+- Tipo (Entrada ou Saída)
+- Data da transação
+
+### GerenciadorFinanceiro
+
+Responsável por:
+
+- Armazenar transações
+- Listar transações
+- Remover transações
+- Calcular saldo
+
+### App
+
+Menu principal da aplicação e interação com o usuário.
