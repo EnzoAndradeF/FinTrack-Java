@@ -19,28 +19,6 @@
 - Manipulação de datas com LocalDate
 - Estruturas de repetição
 - Estruturas condicionais
+- Tratamento de exceções
 
-## Estrutura do Projeto
 
-### Transacao
-
-Representa uma movimentação financeira contendo:
-
-- ID
-- Descrição
-- Valor
-- Tipo (Entrada ou Saída)
-- Data da transação
-
-### GerenciadorFinanceiro
-
-Responsável por:
-
-- Armazenar transações
-- Listar transações
-- Remover transações
-- Calcular saldo
-
-### App
-
-Menu principal da aplicação e interação com o usuário.
