@@ -1,3 +1,4 @@
+package main.java.com.fintrack.model;
 import java.time.LocalDate;
 
 public class Transacao {

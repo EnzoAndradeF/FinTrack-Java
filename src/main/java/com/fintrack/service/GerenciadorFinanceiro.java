@@ -1,3 +1,7 @@
+package main.java.com.fintrack.service;
+
+import main.java.com.fintrack.model.Transacao;
+import main.java.com.fintrack.exception.TransacaoNaoEncontradaException;
 import java.util.ArrayList;
 
 public class GerenciadorFinanceiro {
@@ -14,6 +18,10 @@ public class GerenciadorFinanceiro {
     }
 
     public void listarTransacoes(){
+        if (transacoes.isEmpty()) {
+            System.out.println("Nenhuma transação cadastrada até o momento.");
+            return;
+        }
         for (Transacao transacao : transacoes) {
             transacao.mostrarDados();
             System.out.println("===============");
@@ -21,31 +29,26 @@ public class GerenciadorFinanceiro {
     }
 
     public void removerTransacao(int idRemovido){
-
         boolean encontrou = false;
 
         for (int i = 0; i < transacoes.size(); i++) {
-            
             Transacao transacao = transacoes.get(i);
-
             
             if (idRemovido == transacao.getId()) {
                 transacoes.remove(i);
                 encontrou = true;
-                System.out.println("Transação Id: " + idRemovido + " removido com sucesso");
+                System.out.println("Transação Id: " + idRemovido + " removida com sucesso");
                 break;
             }
         }
-
+        
         if (!encontrou) {
-            System.out.println("Transação não encontrada");
+            throw new TransacaoNaoEncontradaException("Não foi possível remover: O ID " + idRemovido + " não existe no sistema.");
         }
     }
 
     public double calcularSaldo(){
-
         double saldo = 0;
-
         for (Transacao transacao : transacoes) {
             if (transacao.isEntrada()) {
                 saldo = saldo + transacao.getValor();
@@ -53,9 +56,7 @@ public class GerenciadorFinanceiro {
                 saldo = saldo - transacao.getValor();
             }
         }
-
-        System.out.println("Saldo da conta: " + saldo);
-
+        System.out.println("Saldo da conta: R$ " + saldo);
         return saldo;
     }
 }
