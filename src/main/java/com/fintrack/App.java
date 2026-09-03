@@ -1,5 +1,7 @@
 package main.java.com.fintrack;
 
+import main.java.com.fintrack.model.Entrada;
+import main.java.com.fintrack.model.Saida;
 import main.java.com.fintrack.model.Transacao;
 import main.java.com.fintrack.service.GerenciadorFinanceiro;
 import main.java.com.fintrack.exception.TransacaoNaoEncontradaException;
@@ -8,7 +10,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         GerenciadorFinanceiro gerenciador = new GerenciadorFinanceiro();
         int opcao = -1;
@@ -44,18 +46,16 @@ public class App {
                         String tipoTransacao = scanner.nextLine();
                         boolean entrada;
 
+                        Transacao novaTransacao;
+
                         if (tipoTransacao.equalsIgnoreCase("E")) {
-                            entrada = true;
-                        } else if (tipoTransacao.equalsIgnoreCase("S")){
-                            entrada = false;
+                            novaTransacao = new Entrada(descricaoTransacao, valorTransacao);
+                        } else if (tipoTransacao.equalsIgnoreCase("S")) {
+                            novaTransacao = new Saida(descricaoTransacao, valorTransacao);
                         } else {
-                            System.out.println("Comando não reconhecido. Cadastro cancelado.");
+                            System.out.println("Comando não reconhecido");
                             break;
                         }
-
-                        Transacao novaTransacao = new Transacao(descricaoTransacao, valorTransacao, entrada);
-                        System.out.println("");
-                        novaTransacao.mostrarDados();
 
                         gerenciador.cadastrarTransacao(novaTransacao);
                         break;
@@ -88,19 +88,20 @@ public class App {
                     case 0:
                         System.out.println("Encerrando...");
                         break;
-                
+
                     default:
                         System.out.println("Opção inválida. Digite um número de 0 a 4.");
                         break;
                 }
 
             } catch (InputMismatchException e) {
-                System.err.println("Erro: Entrada inválida! Por favor, use apenas os números indicados.");
+                System.err.println(
+                        "Erro: Entrada inválida! Por favor, use apenas os números indicados.");
                 scanner.nextLine();
             }
-            
+
         } while (opcao != 0);
-        
+
         scanner.close();
     }
 }
