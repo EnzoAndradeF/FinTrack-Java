@@ -1,0 +1,7 @@
+main/java/com/fintrack/exception/TransacaoNaoEncontradaException.class
+main/java/com/fintrack/repository/RepositorioGenerico.class
+main/java/com/fintrack/App.class
+main/java/com/fintrack/model/Saida.class
+main/java/com/fintrack/model/Transacao.class
+main/java/com/fintrack/service/GerenciadorFinanceiro.class
+main/java/com/fintrack/model/Entrada.class
