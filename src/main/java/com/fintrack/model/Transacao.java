@@ -1,4 +1,4 @@
-package main.java.com.fintrack.model;
+package com.fintrack.model;
 
 import java.time.LocalDate;
 

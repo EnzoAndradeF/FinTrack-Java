@@ -1,9 +1,9 @@
-package main.java.com.fintrack.service;
+package com.fintrack.service;
 
 import java.util.List;
-import main.java.com.fintrack.exception.TransacaoNaoEncontradaException;
-import main.java.com.fintrack.model.Transacao;
-import main.java.com.fintrack.repository.RepositorioGenerico;
+import com.fintrack.exception.TransacaoNaoEncontradaException;
+import com.fintrack.model.Transacao;
+import com.fintrack.repository.RepositorioGenerico;
 
 public class GerenciadorFinanceiro {
 

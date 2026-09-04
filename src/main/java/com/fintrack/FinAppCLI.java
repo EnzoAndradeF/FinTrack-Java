@@ -1,15 +1,15 @@
-package main.java.com.fintrack;
+package com.fintrack;
 
-import main.java.com.fintrack.model.Entrada;
-import main.java.com.fintrack.model.Saida;
-import main.java.com.fintrack.model.Transacao;
-import main.java.com.fintrack.service.GerenciadorFinanceiro;
-import main.java.com.fintrack.exception.TransacaoNaoEncontradaException;
+import com.fintrack.model.Entrada;
+import com.fintrack.model.Saida;
+import com.fintrack.model.Transacao;
+import com.fintrack.service.GerenciadorFinanceiro;
+import com.fintrack.exception.TransacaoNaoEncontradaException;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class App {
+public class FinAppCLI {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         GerenciadorFinanceiro gerenciador = new GerenciadorFinanceiro();
@@ -44,7 +44,7 @@ public class App {
 
                         System.out.print("Digite 'E' para Entrada ou 'S' para Saída: ");
                         String tipoTransacao = scanner.nextLine();
-                        boolean entrada;
+
 
                         Transacao novaTransacao;
 

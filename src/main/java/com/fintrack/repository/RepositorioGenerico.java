@@ -1,4 +1,4 @@
-package main.java.com.fintrack.repository;
+package com.fintrack.repository;
 
 import java.util.ArrayList;
 import java.util.List;

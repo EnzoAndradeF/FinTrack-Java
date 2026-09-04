@@ -3,5 +3,8 @@
 /home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/exception/TransacaoNaoEncontradaException.java
 /home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/model/Saida.java
 /home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/App.java
+/home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/FinApp.java
 /home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/model/Transacao.java
+/home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/controller/FormTransacaoController.java
+/home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/controller/PrimaryController.java
 /home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/model/Entrada.java

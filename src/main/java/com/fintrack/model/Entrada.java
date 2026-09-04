@@ -1,4 +1,4 @@
-package main.java.com.fintrack.model;
+package com.fintrack.model;
 
 public class Entrada extends Transacao {
 

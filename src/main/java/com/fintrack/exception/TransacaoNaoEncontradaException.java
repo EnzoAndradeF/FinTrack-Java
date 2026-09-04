@@ -1,4 +1,4 @@
-package main.java.com.fintrack.exception;
+package com.fintrack.exception;
 
 public class TransacaoNaoEncontradaException extends RuntimeException {
     public TransacaoNaoEncontradaException(String mensagem) {
