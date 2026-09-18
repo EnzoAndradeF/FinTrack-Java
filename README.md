@@ -11,6 +11,7 @@ O **FinTrack** é uma aplicação desktop para controle e gerenciamento de trans
 - **Remoção de Itens:** Exclusão de transações diretamente na tabela com recalculagem do saldo total.
 - **Cálculo Polimórfico de Saldo:** Processamento automatizado do impacto de cada tipo de transação no saldo consolidado.
 - **Interface Dupla:** Suporte para interatividade via Terminal (CLI) e Interface Gráfica (GUI).
+- **Acesso a banco de dados (JDBC & MySQL)**
 
 ---
 
@@ -23,37 +24,45 @@ O **FinTrack** é uma aplicação desktop para controle e gerenciamento de trans
 - **Generics**
 - **JavaFX - Interface Gráfica**
 - **FXML e Scene Builder**
+- **JDBC - Conexão com banco de dados**
+- **Statement**
+- **ResultSet**
 
 ## Estrutura do projeto
 ```text
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── com/
+│       │       └── fintrack/
+│       │           ├── controller/
+│       │           │   ├── FormTransacaoController.java
+│       │           │   └── PrimaryController.java
+│       │           ├── dao/
+│       │           │   ├── TransacaoDAO.java
+│       │           │   └── TransacaoDAOJBDC.java
+│       │           ├── exception/
+│       │           │   └── TransacaoNaoEncontradaException.java
+│       │           ├── factory/
+│       │           │   └── ConnectionFactory.java
+│       │           ├── model/
+│       │           │   ├── Entrada.java
+│       │           │   ├── Saida.java
+│       │           │   └── Transacao.java
+│       │           ├── repository/
+│       │           │   └── RepositorioGenerico.java
+│       │           ├── service/
+│       │           │   └── GerenciadorFinanceiro.java
+│       │           ├── FinAppCLI.java
+│       │           └── FinApp.java
+│       └── resources/
+│           └── com/
+│               └── fintrack/
+│                   ├── views/
+│                   │   ├── form-transacao.fxml
+│                   │   └── primary.fxml
+│                   └── style.css
 ├── pom.xml
-├── README.md
-└── src
-    └── main
-        ├── java
-        │   └── com
-        │       └── fintrack
-        │           ├── controller
-        │           │   ├── FormTransacaoController.java
-        │           │   └── PrimaryController.java
-        │           ├── exception
-        │           │   └── TransacaoNaoEncontradaException.java
-        │           ├── FinAppCLI.java
-        │           ├── FinApp.java
-        │           ├── model
-        │           │   ├── Entrada.java
-        │           │   ├── Saida.java
-        │           │   └── Transacao.java
-        │           ├── repository
-        │           │   └── RepositorioGenerico.java
-        │           └── service
-        │               └── GerenciadorFinanceiro.java
-        └── resources
-            └── com
-                └── fintrack
-                    ├── style.css
-                    └── views
-                        ├── form-transacao.fxml
-                        └── primary.fxml
+└── README.md
 ```
 
