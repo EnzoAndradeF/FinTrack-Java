@@ -1,9 +1,0 @@
-com/fintrack/FinApp.class
-com/fintrack/model/Transacao.class
-com/fintrack/exception/TransacaoNaoEncontradaException.class
-com/fintrack/model/Saida.class
-com/fintrack/controller/PrimaryController.class
-com/fintrack/repository/RepositorioGenerico.class
-com/fintrack/model/Entrada.class
-com/fintrack/service/GerenciadorFinanceiro.class
-com/fintrack/App.class
