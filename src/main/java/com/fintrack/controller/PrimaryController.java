@@ -1,7 +1,7 @@
 package com.fintrack.controller;
 
-import com.fintrack.model.Entrada;
-import com.fintrack.model.Saida;
+import com.fintrack.dao.TransacaoDAO;
+import com.fintrack.dao.TransacaoDAOJBDC;
 import com.fintrack.model.Transacao;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -34,6 +34,8 @@ public class PrimaryController {
 
     private ObservableList<Transacao> listaTransacoes = FXCollections.observableArrayList();
 
+    private TransacaoDAO transacaoDAO = new TransacaoDAOJBDC();
+
     @FXML
     public void initialize() {
         // Mapeia os atributos/getters da classe Transacao
@@ -42,10 +44,16 @@ public class PrimaryController {
         colValor.setCellValueFactory(new PropertyValueFactory<>("valor"));
         colData.setCellValueFactory(new PropertyValueFactory<>("dataTransacao"));
 
-        tabelaTransacoes.setItems(listaTransacoes);
+        carregarDadosDoBanco();
 
     }
 
+    private void carregarDadosDoBanco() {
+        listaTransacoes.clear();
+        listaTransacoes.addAll(transacaoDAO.listarTodas());
+        tabelaTransacoes.setItems(listaTransacoes);
+        atualizarSaldo();
+    }
 
 
     private void atualizarSaldo() {
@@ -70,8 +78,9 @@ public class PrimaryController {
             stage.showAndWait();
 
             if (controller.isSalvou() && controller.getTransacaoCriada() != null) {
-                listaTransacoes.add(controller.getTransacaoCriada());
-                atualizarSaldo();
+                Transacao novTransacao = controller.getTransacaoCriada();
+                transacaoDAO.salvar(novTransacao);
+                carregarDadosDoBanco();
             }
 
         } catch (Exception e) {
@@ -84,9 +93,9 @@ public class PrimaryController {
         Transacao selecionada = tabelaTransacoes.getSelectionModel().getSelectedItem();
 
         if (selecionada != null) {
-            listaTransacoes.remove(selecionada);
-            atualizarSaldo();
-            System.out.println("Transação removida: " + selecionada.getDescricao());
+            transacaoDAO.deletar(selecionada.getId());
+            carregarDadosDoBanco();
+            System.out.println("Transação removida do banco: " + selecionada.getDescricao());
         }
     }
 }

@@ -1,6 +1,14 @@
 package com.fintrack.model;
 
+import java.time.LocalDate;
+
 public class Entrada extends Transacao {
+
+
+
+    public Entrada(int id, String descricao, double valor, LocalDate dataTransacao) {
+        super(id, descricao, valor, dataTransacao);
+    }
 
     public Entrada(String descricao, double valor) {
         super(descricao, valor);

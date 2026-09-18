@@ -10,11 +10,21 @@ public abstract class Transacao {
     private LocalDate dataTransacao;
 
     public Transacao(String descricao, double valor) {
-        this.id = proximoId++;
         this.descricao = descricao;
         this.valor = valor;
         this.dataTransacao = LocalDate.now();
     }
+
+
+
+    public Transacao(int id, String descricao, double valor, LocalDate dataTransacao) {
+        this.id = id;
+        this.descricao = descricao;
+        this.valor = valor;
+        this.dataTransacao = dataTransacao;
+    }
+
+
 
     public abstract double getImpactoSaldo();
 
@@ -44,5 +54,14 @@ public abstract class Transacao {
     public LocalDate getDataTransacao() {
         return dataTransacao;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
 
 }

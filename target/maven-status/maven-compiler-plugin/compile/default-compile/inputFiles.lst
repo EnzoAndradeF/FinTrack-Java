@@ -1,10 +1,13 @@
-/home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/repository/RepositorioGenerico.java
 /home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/service/GerenciadorFinanceiro.java
-/home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/FinAppCLI.java
 /home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/exception/TransacaoNaoEncontradaException.java
 /home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/model/Saida.java
-/home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/FinApp.java
 /home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/model/Transacao.java
 /home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/controller/FormTransacaoController.java
-/home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/controller/PrimaryController.java
 /home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/model/Entrada.java
+/home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/repository/RepositorioGenerico.java
+/home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/factory/ConnectionFactory.java
+/home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/FinAppCLI.java
+/home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/FinApp.java
+/home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/dao/TransacaoDAO.java
+/home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/controller/PrimaryController.java
+/home/enzoandradeferreira/Projetos/FinTrack-Java/src/main/java/com/fintrack/dao/TransacaoDAOJBDC.java

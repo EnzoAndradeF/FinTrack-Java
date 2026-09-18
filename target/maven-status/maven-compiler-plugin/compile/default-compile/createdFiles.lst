@@ -1,9 +1,12 @@
 com/fintrack/FinApp.class
 com/fintrack/model/Transacao.class
 com/fintrack/exception/TransacaoNaoEncontradaException.class
+com/fintrack/factory/ConnectionFactory.class
 com/fintrack/model/Saida.class
+com/fintrack/dao/TransacaoDAOJBDC.class
 com/fintrack/controller/FormTransacaoController.class
 com/fintrack/controller/PrimaryController.class
+com/fintrack/dao/TransacaoDAO.class
 com/fintrack/repository/RepositorioGenerico.class
 com/fintrack/model/Entrada.class
 com/fintrack/service/GerenciadorFinanceiro.class
